@@ -1,0 +1,422 @@
+/*--------------------------------- fonts -----------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Old+Standard+TT|Ubuntu");
+@font-face {
+  font-family: 'Milkshake';
+  src: url("../fonts/Milkshake/Milkshake.otf") format("opentype");
+  src: url("../fonts/Milkshake/Milkshake.ttf") format("truetype"); }
+
+/* ---------------------------- sass stuff -------------------------------------- */
+.center, .header .header__logo, .header .header__basket, .header .nav, .header .nav .nav__ul, .footer .footer__content, .footer .footer__info__line {
+  margin: 0 auto;
+  text-align: center; }
+
+.paragraph_font_style, .introduction .introduction__text, .history .history__container__text, .features .features__title__text, .components .components__text, .components .components__item .components__item__price, .footer .footer__content .footer__content__text, .footer .footer__content .footer__form__mail, .footer .footer__info__text {
+  color: #6a6a6a;
+  font: 18px Ubuntu, sans-serif; }
+
+.content_title, .introduction .introduction__title, .features .features__title, .components .components__title, .footer .footer__content .footer__content__title {
+  color: #3c3c3c;
+  font: 62px "Old Standard TT", sans-serif; }
+
+.button_container, .introduction .introduction__container__button, .components .components__item .components__container__button, .footer .footer__content .footer__form__container {
+  background-color: #3c3c3c;
+  padding: 5px 10px;
+  display: inline-block; }
+
+.button, .introduction .introduction__container__button .introduction__button, .components .components__item .components__container__button .components__button, .footer .footer__content .footer__form__container .footer__form__submit {
+  background-color: #3c3c3c;
+  color: #fff;
+  padding: 10px 20px;
+  font: 18px Ubuntu, sans-serif;
+  border: 2px solid #fff; }
+  .button:hover, .introduction .introduction__container__button .introduction__button:hover, .components .components__item .components__container__button .components__button:hover, .footer .footer__content .footer__form__container .footer__form__submit:hover {
+    cursor: pointer;
+    background-color: #fff;
+    color: #3c3c3c;
+    border: 2px solid #3c3c3c;
+    font-weight: bold; }
+
+/* ---------------------------- general styles -------------------------------------- */
+.container {
+  margin: 50px auto; }
+
+/* ---------------------------- header -------------------------------------- */
+.header {
+  height: 100vh;
+  background: url("../img/background.jpg") center center/cover;
+  position: relative;
+  color: #fff; }
+  .header:before {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    content: ""; }
+  .header .responsive__menu__button {
+    display: none; }
+  .header .header__logo {
+    font: 50px/100px Milkshake, cursive; }
+  .header .header__basket {
+    text-transform: uppercase;
+    font: 18px/100px Ubuntu, sans-serif; }
+  .header .header__title {
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0 50px; }
+    .header .header__title h1 {
+      padding-top: 12%;
+      font: 72px "Old Standard TT", serif; }
+  .header .header__text {
+    text-align: center;
+    margin: 0 auto;
+    font: 28px Ubuntu, sans-serif;
+    color: #c2c1c1; }
+  .header .responsive__nav {
+    display: none; }
+  .header .nav .nav__ul .nav__item {
+    display: inline-block; }
+    .header .nav .nav__ul .nav__item .nav__link {
+      display: block;
+      font: 18px/100px Ubuntu, sans-serif;
+      padding: 0 10px;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none; }
+      .header .nav .nav__ul .nav__item .nav__link:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+        text-shadow: 3px 3px #000; }
+
+/* ---------------------------- introduction --------------------------------- */
+.introduction .introduction__title {
+  padding: 50px 20px 15px 0; }
+
+.introduction .introduction__text {
+  padding: 0 20px 5px 0; }
+
+.introduction .introduction__picture__container {
+  padding-top: 50px; }
+
+.introduction .introduction__picture {
+  width: 100%; }
+
+/* ---------------------------- history --------------------------------- */
+.history .history__container {
+  padding: 0; }
+
+.history .history__container__text {
+  padding-left: 10px;
+  border-left: 1px solid #dadada;
+  padding-left: 20px; }
+
+.history .history__bike--left {
+  background: url("../img/bike-left.png") no-repeat -5% bottom/auto 100%;
+  position: relative; }
+  .history .history__bike--left .history__line--horizontal {
+    height: 1px;
+    background: #dadada;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 5%; }
+
+/* ---------------------------- features --------------------------------- */
+.features {
+  text-align: center; }
+  .features .features__title {
+    padding: 50px 0; }
+
+/* ---------------------------- gallery --------------------------------- */
+.gallery {
+  text-align: center; }
+  .gallery .gallery__picture--side {
+    padding: 50px 0 10px;
+    width: 33%;
+    margin-left: 66%; }
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='yellow' viewBox='0 0 8 8'%3E%3Cpath d='M4 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='yellow' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+
+/* ---------------------------- components --------------------------------- */
+.components {
+  text-align: center; }
+  .components .components__title {
+    padding: 50px 0; }
+  .components .components__item {
+    margin-top: 50px; }
+    .components .components__item .components__item__picture {
+      width: 100%;
+      height: 200px; }
+    .components .components__item .components__item__text {
+      font: 22px "Old Standard TT", serif;
+      color: #3c3c3c; }
+    .components .components__item .components__item__price {
+      font-size: 22px; }
+
+/* ---------------------------- footer --------------------------------- */
+.footer {
+  text-align: center;
+  background: url("../img/background.jpg") center center/cover;
+  position: relative;
+  color: #fff; }
+  .footer:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: ""; }
+  .footer .footer__content {
+    padding: 100px 0;
+    margin-top: 100px;
+    background: #fff; }
+    .footer .footer__content .footer__content__title {
+      font-size: 40px; }
+    .footer .footer__content .footer__form {
+      font-size: 0; }
+    .footer .footer__content .footer__content__text {
+      padding: 20px 0; }
+    .footer .footer__content .footer__form__mail {
+      background-color: #e8e8e8;
+      height: 55px;
+      padding: 0 10px;
+      margin: 0;
+      border: none; }
+  .footer .footer__info__line {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 80px; }
+  .footer .footer__info__text {
+    color: #fff;
+    padding: 10px 0 0; }
+  .footer .footer__info__reserved {
+    margin-left: 8.33%;
+    text-align: left; }
+  .footer .footer__info__author {
+    text-align: right; }
+
+@media (max-width: 1200px) {
+  .history .history__bike--left {
+    background: url("../img/bike-left.png") no-repeat -5%/100% 100%; } }
+
+@media (max-width: 991px) {
+  .header {
+    background: url("../img/MINbackground.jpg") center center/cover;
+    height: auto; }
+    .header:before {
+      height: 100%; }
+    .header .header__logo {
+      font-size: 40px; }
+    .header .header__basket {
+      font-size: 16px; }
+    .header .header__text {
+      font-size: 20px; }
+    .header .header__title {
+      padding: 30px 0 30px; }
+      .header .header__title h1 {
+        font: 50px "Old Standard TT", serif; }
+    .header .nav__item .nav__link {
+      font-size: 16px; }
+  .introduction .introduction__title {
+    font-size: 30px;
+    padding: 20px 7px 5px 0; }
+  .introduction .introduction__text {
+    padding: 0 5px 5px 0;
+    font-size: 16px; }
+  .introduction .introduction__picture__container {
+    padding-top: 80px; }
+  .history .history__container__text {
+    font-size: 16px; }
+  .features .features__title {
+    font-size: 40px;
+    padding: 20px 0; }
+  .features .features__title__text {
+    font-size: 16px; }
+  .components .components__title {
+    font-size: 40px;
+    padding: 25px 0; }
+  .components .components__text {
+    font-size: 16px; }
+  .components .components__item {
+    margin-top: 25px; }
+    .components .components__item .components__item__picture {
+      width: auto;
+      height: 150px; }
+    .components .components__item .components__item__text {
+      font-size: 20px; }
+    .components .components__item .components__item__price {
+      font-size: 20px; }
+  .footer {
+    background: url("../img/MINbackground.jpg") center center/cover; }
+    .footer .footer__content {
+      padding: 50px 0;
+      margin-top: 50px; }
+      .footer .footer__content .footer__content__title {
+        font-size: 30px; }
+      .footer .footer__content .footer__content__text {
+        padding: 10px 0;
+        font-size: 16px; }
+  .footer__info__line {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 50px; }
+  .footer__info__text {
+    padding: 10px 0 0; }
+  .footer__info__reserved {
+    margin-left: 8.33%;
+    text-align: left; }
+  .footer__info__author {
+    text-align: right; } }
+
+@media (max-width: 767px) {
+  .header .responsive__menu__button {
+    z-index: 10;
+    display: block;
+    background: #000;
+    color: #fff;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    border-radius: 50%; }
+  .header .header__logo {
+    font-size: 30px;
+    text-align: left;
+    width: 40%; }
+  .header .header__basket {
+    text-align: left;
+    font-size: 16px;
+    width: 30%;
+    margin: 0 10px; }
+  .header .header__text {
+    font-size: 18px; }
+  .header .header__title {
+    padding: 15px 10px; }
+    .header .header__title h1 {
+      font-size: 38px; }
+  .header .conteiner__nav {
+    width: 0;
+    height: 0; }
+    .header .conteiner__nav .nav {
+      visibility: hidden; }
+    .header .conteiner__nav .responsive__nav {
+      z-index: 10;
+      display: none;
+      position: fixed;
+      top: 4px;
+      right: 50px; }
+      .header .conteiner__nav .responsive__nav .responsive__ul {
+        list-style-type: none; }
+        .header .conteiner__nav .responsive__nav .responsive__ul .responsive__nav__item {
+          width: 100%;
+          border: 2px #000 solid;
+          margin: 2px 0;
+          border: none; }
+          .header .conteiner__nav .responsive__nav .responsive__ul .responsive__nav__item .responsive__nav__link {
+            text-align: center;
+            display: block;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 100%;
+            font: 16px Ubuntu, sans-serif;
+            padding: 10px;
+            text-transform: uppercase; }
+  .introduction {
+    text-align: center; }
+    .introduction .introduction__title {
+      padding: 8px 4px; }
+    .introduction .introduction__text {
+      padding: 4px; }
+    .introduction .introduction__picture__container {
+      padding-top: 20px; }
+  .history .history__container {
+    text-align: center;
+    padding: 0 20px; }
+  .history .history__container__text {
+    padding: 0;
+    border: none; }
+  .history .history__bike--left {
+    display: none; }
+  .container__picture--side {
+    display: none; }
+  .components .components__title {
+    font-size: 30px;
+    padding: 15px 0; }
+  .components .components__item {
+    margin-top: 15px; }
+    .components .components__item .components__item__picture {
+      width: 100%;
+      height: 150px; }
+    .components .components__item .components__item__text {
+      font-size: 18px; }
+    .components .components__item .components__item__price {
+      font-size: 18px; }
+  .footer__info__line {
+    height: 1px;
+    margin-top: 30px; }
+  .footer__info__text {
+    padding: 5px 0 0; } }
+
+@media (max-width: 575px) {
+  .header .header__logo {
+    font-size: 30px;
+    margin-top: 20px;
+    width: 30%; }
+  .header .header__basket {
+    font-size: 16px;
+    margin-top: 20px;
+    width: 50%;
+    text-align: right; }
+  .header .header__text {
+    font-size: 16px; }
+  .header .header__title {
+    padding: 20px 0 20px; }
+    .header .header__title h1 {
+      font: 40px "Old Standard TT", serif; }
+  .components .components__title {
+    font-size: 30px;
+    padding: 15px 0; }
+  .components .components__item {
+    margin-top: 15px; }
+    .components .components__item .components__item__picture {
+      width: 100px;
+      height: 100px; }
+    .components .components__item .components__item__text {
+      font-size: 18px; }
+    .components .components__item .components__item__price {
+      font-size: 18px; }
+  .footer .footer__content {
+    padding: 10px 0;
+    width: 95%;
+    margin-top: 10px; }
+    .footer .footer__content .footer__content__title {
+      font-size: 24px; }
+    .footer .footer__content .footer__content__text {
+      font-size: 16px;
+      padding: 3px 0; }
+    .footer .footer__content footer__form {
+      padding: 0 2px; }
+      .footer .footer__content footer__form .footer__form__mail {
+        padding: 0 1px; }
+      .footer .footer__content footer__form .footer__form__container {
+        margin-top: 10px; }
+  .footer__info__line {
+    margin-top: 20px; }
+  .footer__info__reserved {
+    width: 40%;
+    margin-left: 0;
+    font-size: 14px; }
+  .footer__info__author {
+    width: 40%;
+    font-size: 14px; } }
+
+/*# sourceMappingURL=style.css.map */
